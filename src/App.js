@@ -3,22 +3,24 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Home from "./pages/Home";
-import Atividades from "./pages/Atividades";
 import Agenda from "./pages/Agenda";
+import Chat from "./pages/Chat";
+import Home from "./pages/Home";
 import Perfil from "./pages/Perfil";
+import Search from "./pages/Search";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
-        <div className="flex-grow">
+      <div className="flex flex-col justify-between bg-[#B7D1D0] min-h-screen">
+        <div className="h-dvh flex-1 overflow-y-auto">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/atividades" element={<Atividades />} />
             <Route path="/agenda" element={<Agenda />} />
+            <Route path="/chat" element={<Chat />} />
             <Route path="/perfil" element={<Perfil />} />
+            <Route path="/search" element={<Search />} />
           </Routes>
         </div>
         <Footer />
